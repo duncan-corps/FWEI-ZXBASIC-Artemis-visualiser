@@ -25,7 +25,7 @@ I'm only interested in some parameters... for Pos;
 Run Fuse like this to create a file connected to its Interface 1's RS232 port and load the program;
 ```
 rs232Rx=/tmp/fuse/rs232-rx
-mkdir --parents --verbose `dirname ${rs232Rx}` && mkfifo ${rs232Rx} && fuse --interface1 --rs232-rx ${rs232Rx} Fuse/Artemis-visualiser.snapshot
+mkdir --parents --verbose `dirname ${rs232Rx}` && mkfifo ${rs232Rx} && fuse --interface1 --recreated-spectrum --rs232-rx ${rs232Rx} --snapshot Fuse/Artemis-visualiser.snapshot
 ```
 
 ## Initial test of connectivity
@@ -50,5 +50,6 @@ Bash/get-data.bash ${rs232Rx}
 
 # Credits
 I used;
+* [The Recreated ZX Spectrum](https://recreatedzxspectrum.com/) (USB, Layer A) - it's really not just "a Bluetooth keyboard"... - and [Fuse](https://fuse-emulator.sourceforge.net/) for the best emulated ZX Spectrum experience.
 * [reddit: r/ArtemisProgram: Additional-Good-3311: I reversed engineered the Google Cloud telemetry json](https://www.reddit.com/r/ArtemisProgram/comments/1scka5i/i_reversed_engineered_the_google_cloud_telemetry/) to understand the JSON from AROW.
-* [Internet Archive: ZX Interface 1 and Microdrive manual: Chapter 8 - using the RS232 interface](https://ia800103.us.archive.org/view_archive.php?archive=/27/items/World_of_Spectrum_June_2017_Mirror/World%20of%20Spectrum%20June%202017%20Mirror.zip&file=World%20of%20Spectrum%20June%202017%20Mirror/sinclair/books/m/MicrodriveAndInterface1Manual.html#chapter8) ... for details of using Interface 1's RS232 from ZX BASIC.
+* [Internet Archive: ZX Interface 1 and Microdrive manual: Chapter 8 - using the RS232 interface](https://ia800103.us.archive.org/view_archive.php?archive=/27/items/World_of_Spectrum_June_2017_Mirror/World%20of%20Spectrum%20June%202017%20Mirror.zip&file=World%20of%20Spectrum%20June%202017%20Mirror/sinclair/books/m/MicrodriveAndInterface1Manual.html#chapter8) for details of using Interface 1's RS232 from ZX BASIC.
